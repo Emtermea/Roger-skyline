@@ -1,0 +1,1 @@
+ls -Slhp | grep -v /
