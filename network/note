@@ -1,0 +1,10 @@
+#list all network MAC Adress
+networksetup -listallhardwareports
+
+#network 03
+networksetup -listallhardwareports | egrep -A 2 "(AirPort|Wi-Fi)" | grep Ethernet | cut -f 3- -d ' '
+
+#network 04
+route get default | grep gateway | cut -f 2 -d :
+||
+netstat -r 
